@@ -82,7 +82,7 @@
       <div class="dash-overlay"></div>
       <aside class="dash-sidebar">
         <button class="dash-sidebar-close" type="button" aria-label="Close dashboard menu"><i class="fa-solid fa-xmark"></i></button>
-        <a href="index.html" class="dash-logo" aria-label="Stackly home"><img class="brand-logo" src="stackly/assets/icons/images/Stackly_logo.png" alt="Stackly logo"></a>
+        <a href="index.html" class="dash-logo" aria-label="Stackly home"><img class="brand-logo" src="assets/icons/images/Stackly_logo.png" alt="Stackly logo"></a>
         <nav class="dash-nav" aria-label="Dashboard">${menu}</nav>
         <div class="dash-cta">
           <b>Need help?</b>
