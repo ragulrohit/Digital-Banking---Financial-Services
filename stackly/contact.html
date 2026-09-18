@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | STACKLY</title>
+  <meta name="description" content="Contact Stackly — send us a message, find our offices, email or call our 24/7 support team.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <div id="navRoot"></div>
+
+  <header class="page-hero">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-3" style="right:-40px;bottom:-70px"></span>
+    <div class="container">
+      <h1>Let's <span class="grad-text-3">talk</span></h1>
+      <p>Questions, feedback or support — our team replies within minutes, day or night.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Contact</span></div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="grid grid-2 contact-layout" style="align-items:start;gap:2.4rem">
+        <!-- left: support info -->
+        <div class="reveal-left contact-info" style="display:grid;gap:1.2rem">
+          <div class="story-img contact-image" style="border-radius:var(--radius-lg)">
+            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1000&q=80"
+                 alt="Friendly Stackly customer support agent helping a customer with headphones">
+          </div>
+          <div class="info-card">
+            <span class="ic"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <h4>Head Office</h4>
+              <p>Stackly Financial Tower, 24 MG Road,<br>Bengaluru, Karnataka 560001, India</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="ic" style="background:var(--grad-cyan)"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <h4>Email Us</h4>
+              <p><a href="mailto:support@stackly.com">support@stackly.com</a><br><a href="mailto:hello@stackly.com">hello@stackly.com</a></p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="ic" style="background:var(--grad-pink)"><i class="fa-solid fa-phone"></i></span>
+            <div>
+              <h4>Call Us</h4>
+              <p>+91 80 4600 4400 (24/7)<br>+1 800 234 5678 (North America)</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="ic" style="background:var(--grad-primary)"><i class="fa-solid fa-circle-question"></i></span>
+            <div>
+              <h4>Support Hours</h4>
+              <p>24 hours a day, 7 days a week —<br>including weekends &amp; holidays.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- right: contact form -->
+        <div class="reveal-right">
+          <div class="card contact-form-card" style="padding:2.2rem">
+            <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Send A Message</span>
+            <h2 class="section-title" style="font-size:1.6rem">How can we help?</h2>
+            <form id="contactForm" class="form-grid" style="margin-top:1.2rem">
+              <div class="form-group">
+                <label class="form-label" for="cName">Full Name</label>
+                <input class="form-control" id="cName" type="text" placeholder="Your name">
+                <span class="input-err">Please enter your name</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cEmail">Email Address</label>
+                <input class="form-control" id="cEmail" type="email" placeholder="you@example.com">
+                <span class="input-err">Enter a valid email</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cPhone">Phone Number</label>
+                <input class="form-control" id="cPhone" type="tel" placeholder="+91 98765 43210">
+                <span class="input-err">Please enter your phone</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cSubject">Subject</label>
+                <input class="form-control" id="cSubject" type="text" placeholder="How can we help?">
+                <span class="input-err">Please enter a subject</span>
+              </div>
+              <div class="form-group full">
+                <label class="form-label" for="cMessage">Message</label>
+                <textarea class="form-control" id="cMessage" placeholder="Write your message here..."></textarea>
+                <span class="input-err">Please enter a message</span>
+              </div>
+              <div class="full">
+                <button class="btn btn-primary btn-block" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                <div id="contactSuccess" class="contact-success">
+                  <i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent. We'll reply within 24 hours.
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <section class="contact-map reveal" aria-labelledby="office-map-title">
+        <div class="contact-map-head">
+          <div>
+            <span class="section-tag"><i class="fa-solid fa-map-location-dot"></i> Find Us</span>
+            <h2 id="office-map-title">Visit our head office</h2>
+          </div>
+          <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&query=24+MG+Road+Bengaluru+Karnataka+560001" target="_blank" rel="noopener">
+            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+          </a>
+        </div>
+        <div class="contact-map-frame">
+          <iframe
+            title="Stackly head office map"
+            src="https://www.google.com/maps?q=24+MG+Road,+Bengaluru,+Karnataka+560001&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footerRoot"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

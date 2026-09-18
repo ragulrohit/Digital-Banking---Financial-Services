@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stackly">
+  <defs>
+    <linearGradient id="brand" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2742f5"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <path d="M12 42 25 29l9 9L53 19" fill="none" stroke="url(#brand)" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+  <path d="M42 19h11v11" fill="none" stroke="#7c3aed" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+</svg>

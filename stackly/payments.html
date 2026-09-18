@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments | STACKLY</title>
+  <meta name="description" content="Stackly payments — UPI, international transfers, bill payments, secure transactions and real-time payment tracking.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="payments">
+  <div id="navRoot"></div>
+
+  <header class="page-hero">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-3" style="right:-40px;bottom:-70px"></span>
+    <div class="container">
+      <h1>Smart <span class="grad-text-3">Payments</span></h1>
+      <p>Pay anyone, anywhere, instantly — with enterprise-grade security built into every tap.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Payments</span></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- feature grid -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-bolt"></i> Payment Solutions</span>
+          <h2 class="section-title">Everything you need to <span class="grad-text">move money</span></h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="feature-card reveal reveal-delay-1">
+            <span class="icon-chip icon-bg-blue"><i class="fa-solid fa-mobile-screen-button"></i></span>
+            <h3>Digital Payments</h3>
+            <p>Instant UPI, IMPS and NEFT payments from your phone — 24×7, 365 days.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <span class="icon-chip icon-bg-purple"><i class="fa-solid fa-globe"></i></span>
+            <h3>International Transfers</h3>
+            <p>Send money in 40+ currencies at real exchange rates with tiny fees.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-3">
+            <span class="icon-chip icon-bg-cyan"><i class="fa-solid fa-file-invoice-dollar"></i></span>
+            <h3>Bill Payments</h3>
+            <p>Electricity, water, internet, DTH — auto-pay all your bills on time.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <span class="icon-chip icon-bg-green"><i class="fa-solid fa-shield-halved"></i></span>
+            <h3>Secure Transactions</h3>
+            <p>Tokenised cards, 3-D Secure and live fraud scoring on every payment.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-3">
+            <span class="icon-chip icon-bg-pink"><i class="fa-solid fa-timeline"></i></span>
+            <h3>Payment Tracking</h3>
+            <p>Follow every payment in real time from sent to settled to refunded.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-4">
+            <span class="icon-chip icon-bg-amber"><i class="fa-solid fa-qrcode"></i></span>
+            <h3>UPI &amp; QR Solutions</h3>
+            <p>Accept payments anywhere with a dynamic QR code for your business.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- image + quick payment form -->
+    <section class="section tight" style="background:linear-gradient(180deg, transparent, #fff)">
+      <div class="container split">
+        <div class="story-shell reveal-left">
+          <div class="story-img">
+            <img src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?auto=format&fit=crop&w=1000&q=80"
+                 alt="Customer using a smartphone banking app for a digital wallet payment">
+          </div>
+          <div class="experience-badge" style="background:var(--grad-cyan)"><b>3 sec</b><span>Avg. payment time</span></div>
+        </div>
+        <div class="reveal-right">
+          <span class="section-tag"><i class="fa-solid fa-money-bill-transfer"></i> Try A Quick Payment</span>
+          <h2 class="section-title">Send money <span class="grad-text">right now</span></h2>
+          <form id="quickPayForm" class="card" style="padding:1.8rem;gap:1.1rem;display:grid">
+            <div class="form-group">
+              <label class="form-label" for="quickName">Recipient Name</label>
+              <input class="form-control" id="quickName" placeholder="e.g. Priya Sharma">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="quickUpi">Account / UPI ID</label>
+              <input class="form-control" id="quickUpi" placeholder="priya@stacklyburp">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="quickAmount">Amount (₹)</label>
+              <input class="form-control" type="number" id="quickAmount" min="1" placeholder="e.g. 5000">
+            </div>
+            <button class="btn btn-primary btn-block" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Payment</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- payment methods + tracking -->
+    <section class="section tight">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-timeline"></i> How It Works</span>
+          <h2 class="section-title">Track every payment <span class="grad-text">end to end</span></h2>
+        </div>
+        <div class="card reveal" style="padding:2rem">
+          <div class="tracking">
+            <div class="trk done"><i class="fa-solid fa-check"></i><b>Sent</b></div>
+            <div class="trk done"><i class="fa-solid fa-landmark"></i><b>Processed</b></div>
+            <div class="trk now"><i class="fa-solid fa-wallet"></i><b>Settled</b></div>
+          </div>
+        </div>
+
+        <div class="grid grid-3" style="margin-top:1.8rem">
+          <div class="feature-card reveal reveal-delay-1">
+            <span class="icon-chip icon-bg-blue"><i class="fa-solid fa-bag-shopping"></i></span>
+            <h3>Shoppers</h3>
+            <p>Checkout online or in-store with one tap using saved cards and UPI.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <span class="icon-chip icon-bg-purple"><i class="fa-solid fa-store"></i></span>
+            <h3>Merchants</h3>
+            <p>Collect payments, issue refunds and reconcile daily in a single dashboard.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-3">
+            <span class="icon-chip icon-bg-cyan"><i class="fa-solid fa-users"></i></span>
+            <h3>Businesses</h3>
+            <p>Payroll, vendor payouts and bulk disbursements automated on schedule.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- recent transactions -->
+    <section class="section tight" style="background:linear-gradient(180deg, transparent, #fff)">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-clock-rotate-left"></i> Recent Activity</span>
+          <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2rem)"><span class="grad-text">Live</span> transaction cards</h2>
+        </div>
+        <div class="dash-grid">
+          <div class="dash-card reveal-left">
+            <div style="display:grid;gap:.8rem">
+              <div class="tx-card">
+                <span class="tx-icon" style="background:linear-gradient(135deg,#2742f5,#7c3aed)"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                <div class="tx-meta"><b>Sent · UPI Transfer</b><span>Today, 09:42 AM</span></div>
+                <span class="tx-amount amount-out">−₹2,400</span>
+              </div>
+              <div class="tx-card">
+                <span class="tx-icon" style="background:linear-gradient(135deg,#22c55e,#0d9488)"><i class="fa-solid fa-arrow-down-to-line"></i></span>
+                <div class="tx-meta"><b>Received · Salary</b><span>Today, 08:15 AM</span></div>
+                <span class="tx-amount amount-in">+₹85,000</span>
+              </div>
+              <div class="tx-card">
+                <span class="tx-icon" style="background:linear-gradient(135deg,#f59e0b,#ef4444)"><i class="fa-solid fa-bolt"></i></span>
+                <div class="tx-meta"><b>Bill · Electricity</b><span>Yesterday, 06:30 PM</span></div>
+                <span class="tx-amount amount-out">−₹1,240</span>
+              </div>
+              <div class="tx-card">
+                <span class="tx-icon" style="background:linear-gradient(135deg,#22d3ee,#0d9488)"><i class="fa-solid fa-plane"></i></span>
+                <div class="tx-meta"><b>International · EUR</b><span>Mon, 11:05 AM</span></div>
+                <span class="tx-amount amount-out">−€320</span>
+              </div>
+            </div>
+          </div>
+          <div class="dash-card reveal-right">
+            <h3 style="margin-bottom:1rem">Payment Statistics</h3>
+            <div class="grid" style="gap:1rem">
+              <div class="stat-card"><div class="sc-top"><span class="sc-icon icon-bg-blue"><i class="fa-solid fa-money-bill-transfer"></i></span></div><span class="sc-label">Total Processed (Month)</span><b class="sc-value counter" data-target="48250" data-prefix="$" >0</b><span class="sc-trend trend-up"><i class="fa-solid fa-arrow-trend-up"></i> 12.4% vs last month</span></div>
+              <div class="stat-card c2"><div class="sc-top"><span class="sc-icon icon-bg-cyan"><i class="fa-solid fa-bolt"></i></span></div><span class="sc-label">Transactions Today</span><b class="sc-value counter" data-target="1284">0</b><span class="sc-trend trend-up"><i class="fa-solid fa-arrow-trend-up"></i> +204 today</span></div>
+              <div class="stat-card c3"><div class="sc-top"><span class="sc-icon icon-bg-pink"><i class="fa-solid fa-shield-halved"></i></span></div><span class="sc-label">Fraud Blocked</span><b class="sc-value counter" data-target="99.98" data-suffix="%" data-decimals="2">0</b><span class="sc-trend" style="color:var(--green)">Zero breach this year</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section tight">
+      <div class="container">
+        <div class="stats-band reveal reveal-scale" style="grid-template-columns:1fr auto;align-items:center;text-align:left;padding:3rem 3.2rem">
+          <div>
+            <h2 style="color:#fff;font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:.4rem">Move money with zero stress</h2>
+            <p style="color:rgba(255,255,255,.75)">Join the fastest, safest payment network built for the modern world.</p>
+          </div>
+          <div style="display:flex;gap:.9rem;flex-wrap:wrap">
+            <a href="signup.html" class="btn btn-light btn-lg"><i class="fa-solid fa-rocket"></i> Get Started</a>
+            <a href="login.html" class="btn btn-outline btn-lg"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footerRoot"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

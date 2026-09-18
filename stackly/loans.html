@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loans | STACKLY</title>
+  <meta name="description" content="Stackly loans — personal, home, education, business and vehicle loans with a live EMI calculator.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="loans">
+  <div id="navRoot"></div>
+
+  <header class="page-hero">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2" style="right:-40px;bottom:-70px"></span>
+    <div class="container">
+      <h1>Loans made <span class="grad-text-3">flexible</span></h1>
+      <p>Borrow for what matters — with transparent rates and EMI calculators before you even apply.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Loans</span></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- loan types -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-hand-holding-dollar"></i> Loan Products</span>
+          <h2 class="section-title">Borrow the smart way, <span class="grad-text">at the right rate</span></h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="loan-card reveal reveal-delay-1">
+            <div class="lc-img"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Personal loan applicant calculating repayment with a financial calculator"></div>
+            <div class="lc-body">
+              <span class="rate-tag">from 10.5%</span>
+              <h3>Personal Loan</h3>
+              <p>Fund weddings, travel or a new venture. Up to ₹50 lakh, repaid your way.</p>
+              <a href="#calculator" class="learn-more">Calculate EMI <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="loan-card reveal reveal-delay-2">
+            <div class="lc-img"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Happy family holding keys to their new home financed by a housing loan"></div>
+            <div class="lc-body">
+              <span class="rate-tag">from 8.4%</span>
+              <h3>Home Loan</h3>
+              <p>Own your dream home with loans up to ₹5 crore and tax-saving EMIs.</p>
+              <a href="#calculator" class="learn-more">Calculate EMI <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="loan-card reveal reveal-delay-3">
+            <div class="lc-img"><img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80" alt="Graduate student researching financed education in a library"></div>
+            <div class="lc-body">
+              <span class="rate-tag">from 9.2%</span>
+              <h3>Education Loan</h3>
+              <p>Study at home or abroad with full tuition coverage and moratorium options.</p>
+              <a href="#calculator" class="learn-more">Calculate EMI <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="loan-card reveal reveal-delay-2">
+            <div class="lc-img"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Entrepreneur planning business expansion funded by a business loan"></div>
+            <div class="lc-body">
+              <span class="rate-tag">from 11%</span>
+              <h3>Business Loan</h3>
+              <p>Unsecured working capital up to ₹2 crore with same-week disbursement.</p>
+              <a href="#calculator" class="learn-more">Calculate EMI <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="loan-card reveal reveal-delay-3">
+            <div class="lc-img"><img src="https://images.unsplash.com/photo-1567359781514-3b964e2b04d6?auto=format&fit=crop&w=800&q=80" alt="Family standing beside their new car purchased with a vehicle loan"></div>
+            <div class="lc-body">
+              <span class="rate-tag">from 7.9%</span>
+              <h3>Vehicle Loan</h3>
+              <p>Cars and two-wheelers with 100% on-road funding and zero processing.</p>
+              <a href="#calculator" class="learn-more">Calculate EMI <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="loan-card reveal reveal-delay-4" style="justify-content:center">
+            <div class="lc-body" style="align-items:flex-start;padding:2rem">
+              <span class="icon-chip icon-bg-cyan" style="margin-bottom:.6rem"><i class="fa-solid fa-headset"></i></span>
+              <h3>Not sure which loan?</h3>
+              <p style="flex:none">Use the EMI calculator below or talk to a loan specialist for a personalised rate.</p>
+              <a href="#calculator" class="learn-more">Try the Calculator <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMI Calculator -->
+    <section class="section tight" id="calculator" style="background:linear-gradient(180deg, transparent, #fff)">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-calculator"></i> Live EMI Calculator</span>
+          <h2 class="section-title">Calculate your EMI in <span class="grad-text">real time</span></h2>
+          <p class="section-sub">Slide the values — monthly EMI, total interest and total amount update instantly, no refresh needed.</p>
+        </div>
+
+        <div class="calc-shell reveal reveal-scale">
+          <div class="calc-panel">
+            <div class="range-row">
+              <label for="loanAmount">Loan Amount <output id="amountOut">₹10,00,000</output></label>
+              <input type="range" id="loanAmount" min="100000" max="5000000" step="50000" value="1000000">
+            </div>
+            <div class="range-row">
+              <label for="loanRate">Interest Rate (p.a.) <output id="rateOut">10.5%</output></label>
+              <input type="range" id="loanRate" min="7" max="18" step="0.1" value="10.5">
+            </div>
+            <div class="range-row">
+              <label for="loanTenure">Loan Tenure <output id="tenureOut">5 yrs</output></label>
+              <input type="range" id="loanTenure" min="1" max="30" step="1" value="5">
+            </div>
+            <p style="font-size:.82rem;color:var(--muted)">
+              <i class="fa-solid fa-circle-info"></i> EMI formula: P × r × (1+r)ⁿ / ((1+r)ⁿ − 1)
+            </p>
+          </div>
+          <div class="calc-result">
+            <div>
+              <span style="font-size:.78rem;color:rgba(255,255,255,.6)">Your Monthly EMI</span>
+              <div class="emr-big" id="emiVal">₹ 21,506</div>
+            </div>
+            <div class="result-list">
+              <div class="result-row"><span>Principal Amount</span><b id="principalVal">₹ 10,00,000</b></div>
+              <div class="result-row"><span>Total Interest</span><b class="emr-sub" id="interestVal">₹ 0</b></div>
+              <div class="result-row"><span>Total Amount Payable</span><b id="totalVal">₹ 0</b></div>
+            </div>
+            <a href="signup.html" class="btn btn-light btn-lg" style="margin-top:.4rem"><i class="fa-solid fa-rocket"></i> Apply For Loan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- image + CTA -->
+    <section class="section tight">
+      <div class="container split">
+        <div class="story-shell reveal-left">
+          <div class="story-img small">
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1000&q=80"
+                 alt="Couple approving a digital loan application on a smartphone and card">
+          </div>
+          <div class="experience-badge" style="background:var(--grad-cyan)"><b>6 hrs</b><span>Avg. loan approval</span></div>
+        </div>
+        <div class="reveal-right">
+          <h2 class="section-title">Approval in hours.<br><span class="grad-text">Peace of mind forever.</span></h2>
+          <p class="section-sub">Fully digital loan journey — from application to disbursement, straight to your Stackly account.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-circle-check"></i> Paperless KYC &amp; instant eligibility check</li>
+            <li><i class="fa-solid fa-circle-check"></i> No hidden charges or prepayment penalties</li>
+            <li><i class="fa-solid fa-circle-check"></i> Flexible tenure from 1 to 30 years</li>
+          </ul>
+          <div style="display:flex;gap:.9rem;flex-wrap:wrap">
+            <a href="signup.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-paper-plane"></i> Apply Now</a>
+            <a href="contact.html" class="btn btn-ghost btn-lg"><i class="fa-solid fa-headset"></i> Talk To An Expert</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footerRoot"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

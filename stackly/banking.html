@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking | STACKLY</title>
+  <meta name="description" content="Stackly digital banking — savings & current accounts, online banking, account security and transaction management.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="banking">
+  <div id="navRoot"></div>
+
+  <!-- page hero -->
+  <header class="page-hero">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2" style="right:-40px;bottom:-70px"></span>
+    <div class="container">
+      <h1>Digital <span class="grad-text-3">Banking</span></h1>
+      <p>Open an account in minutes and manage it beautifully — from anywhere, on any device.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Banking</span></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- dashboard preview + intro -->
+    <section class="section">
+      <div class="container split">
+        <div class="reveal-left">
+          <span class="section-tag"><i class="fa-solid fa-display"></i> Your Money, In Focus</span>
+          <h2 class="section-title">A banking dashboard that <span class="grad-text">shows you everything</span></h2>
+          <p class="section-sub">Digital account management gives you a real-time view of balances, spending and budgets — beautifully organised in one place.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-circle-check"></i> Real-time balance &amp; transaction sync</li>
+            <li><i class="fa-solid fa-circle-check"></i> Smart monthly spending insights</li>
+            <li><i class="fa-solid fa-circle-check"></i> Instant account-to-account transfers</li>
+            <li><i class="fa-solid fa-circle-check"></i> Auto-generated budgets &amp; reports</li>
+          </ul>
+          <a href="signup.html" class="btn btn-primary"><i class="fa-solid fa-building-columns"></i> Open an Account</a>
+        </div>
+        <div class="reveal-right">
+          <!-- CSS-built banking dashboard preview -->
+          <div class="mock-dash">
+            <div class="mock-top">
+              <div class="mock-dots"><span></span><span></span><span></span></div>
+              <span style="font-size:.78rem;color:rgba(255,255,255,.6)">stackly ⚡ dashboard</span>
+            </div>
+            <div class="mock-balance">
+              <h6>Total Balance</h6>
+              <b>$84,230.58</b>
+            </div>
+            <div class="mock-cards">
+              <div class="mock-click"><i class="fa-solid fa-arrow-down"></i><b>Incoming</b><span>$3,410.20</span></div>
+              <div class="mock-click"><i class="fa-solid fa-arrow-up"></i><b>Outgoing</b><span>$1,240.00</span></div>
+              <div class="mock-click"><i class="fa-solid fa-piggy-bank"></i><b>Savings</b><span>$12,880.00</span></div>
+            </div>
+            <div class="mock-chart" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- account types -->
+    <section class="section tight" style="background:linear-gradient(180deg, transparent, #fff)">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-wallet"></i> Account Types</span>
+          <h2 class="section-title">Manage your money with the right <span class="grad-text">account</span></h2>
+        </div>
+        <div class="grid grid-2">
+          <div class="account-card reveal reveal-delay-1">
+            <span class="fee-chip">Savings</span>
+            <h3 style="margin-top:.8rem">Smart Savings Account</h3>
+            <p>High-yield interest, zero maintenance fees and automatic round-up savings.</p>
+            <div style="display:flex;gap:1.4rem;margin-top:.4rem">
+              <div><span style="font-size:.76rem;color:var(--muted)">Interest Rate</span><br><b class="grad-text">5.25% p.a.</b></div>
+              <div><span style="font-size:.76rem;color:var(--muted)">Min. Balance</span><br><b>₹ 0</b></div>
+              <div><span style="font-size:.76rem;color:var(--muted)">Free Transfers</span><br><b>Unlimited</b></div>
+            </div>
+          </div>
+          <div class="account-card reveal reveal-delay-2">
+            <span class="fee-chip">Current</span>
+            <h3 style="margin-top:.8rem">Business Current Account</h3>
+            <p>Built for businesses — bulk payments, payroll, invoicing and dedicated manager.</p>
+            <div style="display:flex;gap:1.4rem;margin-top:.4rem">
+              <div><span style="font-size:.76rem;color:var(--muted)">Transaction Limit</span><br><b>₹ 10 Cr/day</b></div>
+              <div><span style="font-size:.76rem;color:var(--muted)">Overdraft</span><br><b>Up to 50%</b></div>
+              <div><span style="font-size:.76rem;color:var(--muted)">Payroll Suite</span><br><b>Included</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- feature cards -->
+    <section class="section tight">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Online Banking Features</span>
+          <h2 class="section-title">Everything your bank app should be</h2>
+        </div>
+        <div class="grid grid-4">
+          <div class="feature-card reveal reveal-delay-1">
+            <span class="icon-chip icon-bg-blue"><i class="fa-solid fa-sliders"></i></span>
+            <h3>Account Management</h3>
+            <p>Open, upgrade, freeze and close accounts from one simple control centre.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <span class="icon-chip icon-bg-purple"><i class="fa-solid fa-arrow-right-arrow-left"></i></span>
+            <h3>Transaction Management</h3>
+            <p>Search, filter, export and dispute any transaction in seconds.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-3">
+            <span class="icon-chip icon-bg-cyan"><i class="fa-solid fa-shield-halved"></i></span>
+            <h3>Account Security</h3>
+            <p>Biometric lock, device management and instant card freeze controls.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-4">
+            <span class="icon-chip icon-bg-pink"><i class="fa-solid fa-bell"></i></span>
+            <h3>Smart Alerts</h3>
+            <p>Get instant alerts for every debit, credit and suspicious login.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- stats -->
+    <section class="section tight">
+      <div class="container">
+        <div class="stats-band reveal reveal-scale">
+          <div class="stat-item"><i class="fa-solid fa-building-columns"></i><b class="counter" data-target="2.8" data-decimals="1" data-suffix="M+">0</b><span>Accounts opened</span></div>
+          <div class="stat-item"><i class="fa-solid fa-bolt"></i><b class="counter" data-target="3" data-suffix=" min">0</b><span>Avg. signup time</span></div>
+          <div class="stat-item"><i class="fa-solid fa-lock"></i><b class="counter" data-target="100" data-suffix="%">0</b><span>Fraud-free uptime</span></div>
+          <div class="stat-item"><i class="fa-solid fa-user-tie"></i><b class="counter" data-target="1.2" data-decimals="1" data-suffix=" Cr+">0</b><span>Daily transactions</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section tight">
+      <div class="container split" style="gap:3rem;align-items:center">
+        <div class="story-shell reveal-left">
+          <div class="story-img small">
+            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1000&q=80"
+                 alt="Stackly banker advising a customer on digital banking options from a laptop">
+          </div>
+        </div>
+        <div class="reveal-right">
+          <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.2rem)">Move to Stackly in <span class="grad-text">3 minutes</span></h2>
+          <p class="section-sub">No branch visits, no paperwork, no waiting. Your digital account is ready the moment you sign up.</p>
+          <div style="display:flex;gap:.9rem;flex-wrap:wrap;margin-top:1.5rem">
+            <a href="signup.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-rocket"></i> Open Free Account</a>
+            <a href="payments.html" class="btn btn-ghost btn-lg"><i class="fa-solid fa-credit-card"></i> See Payments</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footerRoot"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

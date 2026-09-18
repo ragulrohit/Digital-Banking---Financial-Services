@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments | STACKLY Dashboard</title>
+  <meta name="description" content="Send money instantly from your Stackly dashboard.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="payments">
+  <div id="dashShell"></div>
+
+  <main class="dash-main">
+    <div class="dash-welcome reveal">
+      <h1>Payments</h1>
+      <p>Send money instantly to anyone, on any platform.</p>
+    </div>
+
+    <div class="dash-grid" style="grid-template-columns:1fr 1.1fr">
+      <!-- ======== send money form ======== -->
+      <div class="dash-card reveal reveal-delay-1">
+        <div class="dash-card-head"><h3>Send Money</h3><span class="badge badge-info">Instant</span></div>
+        <form id="sendMoneyForm" novalidate style="display:grid;gap:1.1rem">
+          <div class="form-group">
+            <label class="form-label" for="payName">Recipient Name</label>
+            <input class="form-control" id="payName" placeholder="e.g. Rohit Kumar">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="payUpi">Account / UPI ID</label>
+            <input class="form-control" id="payUpi" placeholder="rohit@stacklyburp">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="payAmount">Amount (USD)</label>
+            <input class="form-control" type="number" id="payAmount" min="1" step="0.01" placeholder="e.g. 240">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="payMethod">Payment Method</label>
+            <select class="form-control" id="payMethod">
+              <option>UPI</option>
+              <option>IMPS</option>
+              <option>NEFT</option>
+              <option>Digital Wallet</option>
+              <option>International (SWIFT)</option>
+            </select>
+          </div>
+          <button class="btn btn-primary btn-block btn-lg" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Payment</button>
+        </form>
+      </div>
+
+      <!-- ======== history ======== -->
+      <div class="dash-card reveal reveal-delay-2">
+        <div class="dash-card-head"><h3>Payment History</h3><a href="transactions.html" class="learn-more">Full history <i class="fa-solid fa-arrow-right"></i></a></div>
+        <div id="payHistory" style="display:grid;gap:.9rem">
+          <div class="tx-card">
+            <span class="tx-icon" style="background:linear-gradient(135deg,#2742f5,#7c3aed)"><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+            <div class="tx-meta"><b>Priya Sharma</b><span>priya@stacklyburp · UPI</span></div>
+            <span class="tx-amount amount-out">−$120.00</span>
+          </div>
+          <div class="tx-card">
+            <span class="tx-icon" style="background:linear-gradient(135deg,#22c55e,#0d9488)"><i class="fa-solid fa-arrow-down-to-line"></i></span>
+            <div class="tx-meta"><b>Salary Credit</b><span>Stackly Payroll · NEFT</span></div>
+            <span class="tx-amount amount-in">+$4,800.00</span>
+          </div>
+          <div class="tx-card">
+            <span class="tx-icon" style="background:linear-gradient(135deg,#f59e0b,#ef4444)"><i class="fa-solid fa-bolt"></i></span>
+            <div class="tx-meta"><b>Electricity Bill</b><span>Auto-pay · Bill Payments</span></div>
+            <span class="tx-amount amount-out">−$98.20</span>
+          </div>
+          <div class="tx-card">
+            <span class="tx-icon" style="background:linear-gradient(135deg,#22d3ee,#0d9488)"><i class="fa-solid fa-globe"></i></span>
+            <div class="tx-meta"><b>Rent · International</b><span>A-102 Berlin apt · SWIFT EUR</span></div>
+            <span class="tx-amount amount-out">−€820.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======== saved beneficiaries ======== -->
+    <div class="dash-card reveal reveal-delay-2" style="margin-top:1.6rem">
+      <div class="dash-card-head"><h3>Saved Beneficiaries</h3></div>
+      <div class="auto-grid">
+        <div class="alloc-card"><div class="a-name"><span class="avatar" style="background:var(--grad-primary)">RA</span><div><b>Rahul Anand</b><span>rahul@stacklyburp</span></div></div></div>
+        <div class="alloc-card"><div class="a-name"><span class="avatar" style="background:var(--grad-cyan)">MK</span><div><b>Meera Krishnan</b><span>meera@stacklyburp</span></div></div></div>
+        <div class="alloc-card"><div class="a-name"><span class="avatar" style="background:var(--grad-pink)">SN</span><div><b>Sana Nair</b><span>sana@stacklyburp</span></div></div></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

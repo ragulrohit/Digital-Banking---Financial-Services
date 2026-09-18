@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Accounts | STACKLY Dashboard</title>
+  <meta name="description" content="Manage your Stackly savings, current and digital wallet accounts.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="accounts">
+  <div id="dashShell"></div>
+
+  <main class="dash-main">
+    <div class="dash-welcome reveal">
+      <h1>My Accounts</h1>
+      <p>Monitor every account, balance and transaction summary in one place.</p>
+    </div>
+
+    <div class="dash-grid" style="grid-template-columns:1.35fr 1fr">
+      <!-- ======== account cards ======== -->
+      <div style="display:grid;gap:1.4rem">
+        <div class="acct-card reveal reveal-delay-1">
+          <div class="acct-top" style="background:var(--grad-primary)">
+            <b><i class="fa-solid fa-piggy-bank"></i> Savings Account</b>
+            <span class="badge badge-success" style="background:rgba(255,255,255,.2);color:#fff"><i class="fa-solid fa-circle"></i> Active</span>
+          </div>
+          <div class="acct-body">
+            <div class="row"><span>Account Number</span><b class="acct-num"><span class="masked">•••• •••• 4821</span><span class="full" hidden>1002 3456 7890 4821</span></b></div>
+            <div class="row"><span>Account Balance</span><b>$18,230.55</b></div>
+            <div class="row"><span>Available Balance</span><b>$18,230.55</b></div>
+            <div class="row"><span>Interest Rate</span><b>5.25% p.a.</b></div>
+            <div style="margin-top:.9rem"><button class="btn btn-sm btn-ghost mask-toggle"><i class="fa-solid fa-eye"></i> Reveal</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="acct-card reveal reveal-delay-2">
+          <div class="acct-top" style="background:var(--grad-cyan)">
+            <b><i class="fa-solid fa-briefcase"></i> Current Account</b>
+            <span class="badge badge-success" style="background:rgba(255,255,255,.2);color:#fff"><i class="fa-solid fa-circle"></i> Active</span>
+          </div>
+          <div class="acct-body">
+            <div class="row"><span>Account Number</span><b class="acct-num"><span class="masked">•••• •••• 9210</span><span class="full" hidden>3045 6789 0123 9210</span></b></div>
+            <div class="row"><span>Account Balance</span><b>$21,204.90</b></div>
+            <div class="row"><span>Available Balance</span><b>$21,204.90</b></div>
+            <div class="row"><span>Overdraft Limit</span><b>$5,000.00</b></div>
+            <div style="margin-top:.9rem"><button class="btn btn-sm btn-ghost mask-toggle"><i class="fa-solid fa-eye"></i> Reveal</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="acct-card reveal reveal-delay-3">
+          <div class="acct-top" style="background:var(--grad-pink)">
+            <b><i class="fa-solid fa-wallet"></i> Digital Wallet</b>
+            <span class="badge badge-info" style="background:rgba(255,255,255,.2);color:#fff"><i class="fa-solid fa-bolt"></i> Instant</span>
+          </div>
+          <div class="acct-body">
+            <div class="row"><span>UPI ID</span><b>jeeva@stackly</b></div>
+            <div class="row"><span>Wallet Balance</span><b>$3,454.80</b></div>
+            <div class="row"><span>Available Balance</span><b>$3,454.80</b></div>
+            <div class="row"><span>Cashback Earned</span><b>$86.20</b></div>
+            <div style="margin-top:.9rem"><button class="btn btn-sm btn-ghost mask-toggle"><i class="fa-solid fa-eye"></i> Reveal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======== right column: summary + image ======== -->
+      <div style="display:grid;gap:1.4rem">
+        <div class="dash-card reveal reveal-delay-2">
+          <div class="dash-card-head"><h3>Transaction Summary</h3><span class="badge badge-info">This month</span></div>
+          <div class="row" style="display:flex;justify-content:space-between;padding:.5rem 0"><span style="color:var(--muted)">Total Inflow</span><b class="amount-in">+$8,240.60</b></div>
+          <div class="row" style="display:flex;justify-content:space-between;padding:.5rem 0"><span style="color:var(--muted)">Total Outflow</span><b class="amount-out">−$3,610.20</b></div>
+          <div class="row" style="display:flex;justify-content:space-between;padding:.8rem 0 .4rem"><span style="color:var(--muted)">Net Savings</span><b style="color:var(--green)">+$4,630.40</b></div>
+          <h4 style="margin:1rem 0 .6rem;font-size:.9rem">Income vs Spending</h4>
+          <p style="font-size:.8rem;color:var(--muted);margin-bottom:.4rem">Income</p>
+          <div class="progress"><i style="width:82%"></i></div>
+          <p style="font-size:.8rem;color:var(--muted);margin:1rem 0 .4rem">Spending</p>
+          <div class="progress p2"><i style="width:36%"></i></div>
+        </div>
+
+        <div class="story-img reveal reveal-delay-3" style="box-shadow:var(--shadow-sm)">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80"
+               alt="Banking professional shaking hands with a customer after opening an account">
+        </div>
+
+        <a class="dash-card reveal reveal-delay-3" href="transactions.html" style="text-align:center;padding:1.6rem;display:block">
+          <i class="fa-solid fa-arrow-right-arrow-left" style="font-size:1.4rem;color:var(--blue)"></i>
+          <h3 style="margin:.4rem 0">View Full Transaction History</h3>
+          <span class="learn-more">Go to Transactions <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

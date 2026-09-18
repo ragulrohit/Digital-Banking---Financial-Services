@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions | STACKLY Dashboard</title>
+  <meta name="description" content="Search and filter your Stackly transaction history.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="transactions">
+  <div id="dashShell"></div>
+
+  <main class="dash-main">
+    <div class="dash-welcome reveal">
+      <h1>Transactions</h1>
+      <p>Search, filter and analyse every move your money makes.</p>
+    </div>
+
+    <!-- income/expense cards -->
+    <div class="auto-grid reveal reveal-delay-1" style="margin-bottom:1.6rem">
+      <div class="stat-card">
+        <div class="sc-top"><span class="sc-icon icon-bg-green"><i class="fa-solid fa-money-bill-trend-up"></i></span><span class="badge badge-success">Income</span></div>
+        <span class="sc-label">Total Income</span>
+        <b class="sc-value" id="incomeTotal">+$0.00</b>
+      </div>
+      <div class="stat-card c2">
+        <div class="sc-top"><span class="sc-icon icon-bg-pink"><i class="fa-solid fa-arrow-up-from-bracket"></i></span><span class="badge badge-danger">Expense</span></div>
+        <span class="sc-label">Total Expense</span>
+        <b class="sc-value" id="expenseTotal">−$0.00</b>
+      </div>
+      <div class="stat-card c3">
+        <div class="sc-top"><span class="sc-icon icon-bg-blue"><i class="fa-solid fa-list"></i></span><span class="badge badge-info">Filtered</span></div>
+        <span class="sc-label">Transactions Shown</span>
+        <b class="sc-value" id="txnCount">0</b>
+      </div>
+    </div>
+
+    <!-- filter bar -->
+    <div class="dash-card reveal reveal-delay-2" style="margin-bottom:1.6rem">
+      <div class="dash-card-head"><h3>Filter Transactions</h3></div>
+      <div class="filter-bar">
+        <div class="form-group">
+          <label class="form-label" for="txnSearch">Search</label>
+          <input class="form-control" id="txnSearch" placeholder="Search description, status or category...">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="txnDate">Date</label>
+          <input class="form-control" id="txnDate" type="date">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="txnCat">Category</label>
+          <select class="form-control" id="txnCat">
+            <option value="">All Categories</option>
+            <option>Food</option>
+            <option>Shopping</option>
+            <option>Bills</option>
+            <option>Travel</option>
+            <option>Entertainment</option>
+            <option>Income</option>
+          </select>
+        </div>
+        <button class="btn btn-ghost" id="txnReset"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+      </div>
+    </div>
+
+    <!-- table -->
+    <div class="dash-card reveal reveal-delay-3">
+      <div class="dash-card-head"><h3>Transaction History</h3><span class="badge badge-info">Live filter</span></div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th><th>Status</th></tr>
+          </thead>
+          <tbody id="txnTbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var reset = document.getElementById("txnReset");
+      if (reset) {
+        reset.addEventListener("click", function () {
+          var s = document.getElementById("txnSearch"), d = document.getElementById("txnDate"), c = document.getElementById("txnCat");
+          if (s) s.value = "";
+          if (d) d.value = "";
+          if (c) c.value = "";
+          s.dispatchEvent(new Event("input"));
+        });
+      }
+    });
+  </script>
+</body>
+</html>

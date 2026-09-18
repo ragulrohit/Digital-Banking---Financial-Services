@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overview | STACKLY Dashboard</title>
+  <meta name="description" content="Stackly dashboard overview — balances, spending chart and recent transactions.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="overview">
+  <div id="dashShell"></div>
+
+  <main class="dash-main">
+    <div class="dash-welcome reveal">
+      <h1>Welcome back, <span class="grad-text">Jeeva</span></h1>
+      <p>Here is what's happening with your money today. 🚀</p>
+    </div>
+
+    <!-- ======== stat cards ======== -->
+    <div class="auto-grid reveal reveal-delay-1" style="margin-bottom:1.6rem">
+      <div class="stat-card">
+        <div class="sc-top"><span class="sc-icon icon-bg-blue"><i class="fa-solid fa-wallet"></i></span><span class="badge badge-success"><i class="fa-solid fa-arrow-trend-up"></i>8.2%</span></div>
+        <span class="sc-label">Total Balance</span>
+        <b class="sc-value">$42,890.14</b>
+      </div>
+      <div class="stat-card c2">
+        <div class="sc-top"><span class="sc-icon icon-bg-cyan"><i class="fa-solid fa-money-bill-wave"></i></span><span class="badge badge-info">Available</span></div>
+        <span class="sc-label">Available Balance</span>
+        <b class="sc-value">$18,230.55</b>
+      </div>
+      <div class="stat-card c3">
+        <div class="sc-top"><span class="sc-icon icon-bg-green"><i class="fa-solid fa-cart-shopping"></i></span><span class="badge badge-danger"><i class="fa-solid fa-arrow-trend-down"></i>4.1%</span></div>
+        <span class="sc-label">Monthly Spending</span>
+        <b class="sc-value">$2,410.20</b>
+      </div>
+      <div class="stat-card">
+        <div class="sc-top"><span class="sc-icon icon-bg-purple"><i class="fa-solid fa-chart-line"></i></span><span class="badge badge-success"><i class="fa-solid fa-arrow-trend-up"></i>18.2%</span></div>
+        <span class="sc-label">Investments</span>
+        <b class="sc-value">$12,650.00</b>
+      </div>
+      <div class="stat-card c2">
+        <div class="sc-top"><span class="sc-icon icon-bg-amber"><i class="fa-solid fa-hand-holding-dollar"></i></span><span class="badge badge-info">On track</span></div>
+        <span class="sc-label">Loans</span>
+        <b class="sc-value">$8,400.00</b>
+      </div>
+      <div class="stat-card c3">
+        <div class="sc-top"><span class="sc-icon icon-bg-pink"><i class="fa-solid fa-piggy-bank"></i></span><span class="badge badge-success"><i class="fa-solid fa-arrow-trend-up"></i>3.1%</span></div>
+        <span class="sc-label">Savings</span>
+        <b class="sc-value">$6,280.00</b>
+      </div>
+      <div class="stat-card">
+        <div class="sc-top"><span class="sc-icon icon-bg-blue"><i class="fa-solid fa-credit-card"></i></span><span class="badge badge-info">Available</span></div>
+        <span class="sc-label">Credit Limit</span>
+        <b class="sc-value">$15,000.00</b>
+      </div>
+      <div class="stat-card c2">
+        <div class="sc-top"><span class="sc-icon icon-bg-green"><i class="fa-solid fa-arrow-trend-up"></i></span><span class="badge badge-success">+12.4%</span></div>
+        <span class="sc-label">Monthly Cashflow</span>
+        <b class="sc-value">+$3,840.00</b>
+      </div>
+    </div>
+
+    <!-- ======== chart + table ======== -->
+    <div class="dash-grid">
+      <div class="dash-card reveal reveal-delay-2">
+        <div class="dash-card-head">
+          <h3>Recent Transactions</h3>
+          <a href="transactions.html" class="learn-more">View All <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Date</th><th>Description</th><th>Category</th><th>Amount</th><th>Status</th></tr>
+            </thead>
+            <tbody id="overviewTxn"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="dash-card reveal reveal-delay-3">
+        <div class="dash-card-head">
+          <h3>Spending Distribution</h3>
+          <span class="badge badge-info">This month</span>
+        </div>
+        <div class="chart-box">
+          <canvas id="overviewPie" aria-label="Spending distribution pie chart"></canvas>
+          <div class="chart-center">
+            <div><b>$1,290</b><span>Spent in September</span></div>
+          </div>
+        </div>
+        <ul class="legend" style="margin-top:1rem">
+          <li><span class="dot" style="background:#2742f5"></span> Food <b>$420</b></li>
+          <li><span class="dot" style="background:#7c3aed"></span> Shopping <b>$310</b></li>
+          <li><span class="dot" style="background:#22d3ee"></span> Bills <b>$260</b></li>
+          <li><span class="dot" style="background:#f472b6"></span> Travel <b>$180</b></li>
+          <li><span class="dot" style="background:#f59e0b"></span> Entertainment <b>$120</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ======== quick actions ======== -->
+    <div class="dash-card reveal reveal-delay-2" style="margin-top:1.6rem">
+      <div class="dash-card-head"><h3>Quick Actions</h3></div>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr))">
+        <a href="dashboard-payments.html" class="feature-card" style="padding:1.4rem;text-align:center"><span class="icon-chip icon-bg-blue" style="margin:0 auto 0.8rem"><i class="fa-solid fa-paper-plane"></i></span><b>Send Money</b></a>
+        <a href="dashboard-payments.html" class="feature-card" style="padding:1.4rem;text-align:center"><span class="icon-chip icon-bg-green" style="margin:0 auto 0.8rem"><i class="fa-solid fa-file-invoice-dollar"></i></span><b>Pay Bills</b></a>
+        <a href="dashboard-investments.html" class="feature-card" style="padding:1.4rem;text-align:center"><span class="icon-chip icon-bg-purple" style="margin:0 auto 0.8rem"><i class="fa-solid fa-chart-line"></i></span><b>Invest</b></a>
+        <a href="dashboard-loans.html" class="feature-card" style="padding:1.4rem;text-align:center"><span class="icon-chip icon-bg-amber" style="margin:0 auto 0.8rem"><i class="fa-solid fa-hand-holding-dollar"></i></span><b>Apply For Loan</b></a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

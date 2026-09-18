@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | STACKLY</title>
+  <meta name="description" content="Log in to your Stackly digital banking dashboard.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <div class="auth-page">
+    <!-- ============ LEFT: visual panel ============ -->
+    <div class="auth-visual">
+      <span class="av-img"><img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80"
+        alt="Professional financial advisor reviewing banking charts on a laptop"></span>
+      <span class="auth-shape as-1"></span>
+      <span class="auth-shape as-2"></span>
+      <span class="auth-shape as-3"></span>
+      <div class="av-brand"><img class="brand-logo" src="../images/Stackly_logo.png" alt="Stackly logo"></div>
+      <div class="av-quote">
+        <h2>"Banking for the life <br>you're building."</h2>
+        <p>Secure, instant and beautifully simple digital banking trusted by 10M+ customers worldwide.</p>
+      </div>
+      <div class="av-foot"><span><i class="fa-solid fa-shield-halved"></i> 256-bit Encryption</span><span><i class="fa-solid fa-bolt"></i> Instant Payments</span></div>
+    </div>
+
+    <!-- ============ RIGHT: login form ============ -->
+    <div class="auth-form">
+      <a class="auth-back" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+      <div class="auth-box glass" style="padding:2.6rem 2.4rem">
+        <div class="auth-head">
+          <h1>Welcome back <i class="fa-regular fa-hand-wave" style="color:var(--amber)"></i></h1>
+          <p>Login to your Stackly account to continue.</p>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div class="form-group" style="margin-bottom:1.1rem">
+            <label class="form-label" for="loginRole">Select Role</label>
+            <select class="form-control" id="loginRole" required>
+              <option value="" selected disabled>Choose your role</option>
+              <option value="personal">Personal / Individual</option>
+              <option value="business">Business</option>
+            </select>
+            <span class="input-err">Please select a role</span>
+          </div>
+          <div class="form-group" style="margin-bottom:1.1rem">
+            <label class="form-label" for="loginEmail">Email Address</label>
+            <div class="input-wrap">
+              <input class="form-control" id="loginEmail" type="email" placeholder="you@example.com" autocomplete="email">
+              <i class="fa-regular fa-envelope field-icon"></i>
+            </div>
+            <span class="input-err">Enter a valid email address</span>
+          </div>
+
+          <div class="form-group" style="margin-bottom:.6rem">
+            <label class="form-label" for="loginPassword">Password</label>
+            <div class="input-wrap">
+              <input class="form-control" id="loginPassword" type="password" placeholder="Enter your password" autocomplete="current-password">
+              <button type="button" class="field-icon" id="togglePassword" aria-label="Show or hide password"><i class="fa-regular fa-eye"></i></button>
+            </div>
+            <span class="input-err">Please enter your password</span>
+          </div>
+
+          <div class="auth-links">
+            <label class="check-row" style="margin:0"><input type="checkbox" id="rememberMe"> Remember me</label>
+            <a href="404.html" id="forgotLink">Forgot Password?</a>
+          </div>
+
+          <button class="btn btn-primary btn-block btn-lg" type="submit"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+        </form>
+
+        <div class="auth-divider"><span>or</span></div>
+        <a class="google-btn" href="404.html"><svg class="google-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.35 12.27c0-.72-.06-1.42-.18-2.09H12v3.96h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.26Z"/><path fill="#34A853" d="M12 21.65c2.63 0 4.84-.87 6.45-2.36l-3.14-2.45c-.87.58-1.98.93-3.31.93-2.54 0-4.7-1.72-5.47-4.03H3.29v2.53A9.74 9.74 0 0 0 12 21.65Z"/><path fill="#FBBC05" d="M6.53 13.74a5.85 5.85 0 0 1 0-3.48V7.73H3.29a9.72 9.72 0 0 0 0 8.54l3.24-2.53Z"/><path fill="#EA4335" d="M12 6.23c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.31 14.63 2.35 12 2.35a9.74 9.74 0 0 0-8.71 5.38l3.24 2.53C7.3 7.95 9.46 6.23 12 6.23Z"/></svg> Continue with Google</a>
+
+        <p class="auth-alt">Don't have an account? <a href="signup.html">Sign Up</a></p>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    });
+  </script>
+</body>
+</html>

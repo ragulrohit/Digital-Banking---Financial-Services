@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | STACKLY</title>
+  <meta name="description" content="Create your free Stackly digital banking account in minutes.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="signup">
+  <div class="auth-page">
+    <!-- ============ LEFT: visual panel ============ -->
+    <div class="auth-visual">
+      <span class="av-img"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80"
+        alt="Professional woman working on a laptop while opening her Stackly account"></span>
+      <span class="auth-shape as-1"></span>
+      <span class="auth-shape as-2"></span>
+      <span class="auth-shape as-3"></span>
+      <div class="av-brand"><img class="brand-logo" src="../images/Stackly_logo.png" alt="Stackly logo"></div>
+      <div class="av-quote">
+        <h2>Open your account in <br>under 5 minutes.</h2>
+        <p>Zero minimum balance, zero paperwork. Your digital bank account starts right here.</p>
+      </div>
+      <div class="av-foot"><span><i class="fa-solid fa-circle-check"></i> Free Forever</span><span><i class="fa-solid fa-lock"></i> Bank-grade Security</span></div>
+    </div>
+
+    <!-- ============ RIGHT: signup form ============ -->
+    <div class="auth-form">
+      <a class="auth-back" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+      <div class="auth-box glass" style="padding:2.6rem 2.4rem">
+        <div class="auth-head">
+          <h1>Create your account</h1>
+          <p>Join 10M+ customers banking the future.</p>
+        </div>
+
+        <form id="signupForm" novalidate>
+          <div class="form-grid signup-form-grid">
+            <div class="form-group full">
+              <label class="form-label" for="signupName">Full Name</label>
+              <input class="form-control" id="signupName" type="text" placeholder="e.g. Jeeva Ramesh" autocomplete="name">
+              <span class="input-err">Name must be at least 3 characters</span>
+            </div>
+            <div class="form-group full">
+              <label class="form-label" for="signupEmail">Email Address</label>
+              <div class="input-wrap">
+                <input class="form-control" id="signupEmail" type="email" placeholder="you@example.com" autocomplete="email">
+                <i class="fa-regular fa-envelope field-icon"></i>
+              </div>
+              <span class="input-err">Enter a valid email address</span>
+            </div>
+            <div class="form-group full">
+              <label class="form-label" for="signupPhone">Phone Number</label>
+              <div class="input-wrap">
+                <input class="form-control" id="signupPhone" type="tel" placeholder="+91 98765 43210" autocomplete="tel">
+                <i class="fa-solid fa-phone field-icon"></i>
+              </div>
+              <span class="input-err">Enter a valid 10-digit phone number</span>
+            </div>
+            <div class="form-group full">
+              <label class="form-label" for="signupRole">Select Role</label>
+              <select class="form-control" id="signupRole" required>
+                <option value="" selected disabled>Choose your role</option>
+                <option value="personal">Personal / Individual</option>
+              <option value="business">Business</option>
+            </select>
+              <span class="input-err">Please select a role</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="signupPassword">Password</label>
+              <div class="input-wrap">
+                <input class="form-control" id="signupPassword" type="password" placeholder="Create a strong password" autocomplete="new-password">
+                <button type="button" class="field-icon" id="toggleSignupPassword" aria-label="Show or hide password"><i class="fa-regular fa-eye"></i></button>
+              </div>
+              <div class="pw-strength" id="pwStrength" data-score="0"><span></span><span></span><span></span><span></span></div>
+              <span class="pw-label" id="pwLabel" data-score="0"></span>
+              <span class="input-err">Min 8 chars with letters and numbers</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="signupConfirm">Confirm Password</label>
+              <div class="input-wrap">
+                <input class="form-control" id="signupConfirm" type="password" placeholder="Repeat password" autocomplete="new-password">
+                <button type="button" class="field-icon" id="toggleSignupConfirm" aria-label="Show or hide confirm password"><i class="fa-regular fa-eye"></i></button>
+              </div>
+              <span class="input-err">Passwords do not match</span>
+            </div>
+            <div class="form-group full">
+              <label class="check-row">
+                <input type="checkbox" id="termsCheck">
+                <span>I agree to the <a href="#">Terms &amp; Conditions</a> and <a href="#">Privacy Policy</a></span>
+              </label>
+              <span class="input-err">Please accept the terms and conditions</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-block btn-lg" type="submit" style="margin-top:1.1rem"><i class="fa-solid fa-user-plus"></i> Create Account</button>
+        </form>
+
+        <div class="auth-divider"><span>or</span></div>
+        <a class="google-btn" href="404.html"><svg class="google-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.35 12.27c0-.72-.06-1.42-.18-2.09H12v3.96h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.26Z"/><path fill="#34A853" d="M12 21.65c2.63 0 4.84-.87 6.45-2.36l-3.14-2.45c-.87.58-1.98.93-3.31.93-2.54 0-4.7-1.72-5.47-4.03H3.29v2.53A9.74 9.74 0 0 0 12 21.65Z"/><path fill="#FBBC05" d="M6.53 13.74a5.85 5.85 0 0 1 0-3.48V7.73H3.29a9.72 9.72 0 0 0 0 8.54l3.24-2.53Z"/><path fill="#EA4335" d="M12 6.23c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.31 14.63 2.35 12 2.35a9.74 9.74 0 0 0-8.71 5.38l3.24 2.53C7.3 7.95 9.46 6.23 12 6.23Z"/></svg> Continue with Google</a>
+
+        <p class="auth-alt">Already have an account? <a href="login.html">Login</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

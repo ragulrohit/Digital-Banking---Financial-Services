@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investments | STACKLY Dashboard</title>
+  <meta name="description" content="Track your Stackly investment portfolio, profit and holdings.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="investments">
+  <div id="dashShell"></div>
+
+  <main class="dash-main">
+    <div class="dash-welcome reveal">
+      <h1>Investments</h1>
+      <p>Your portfolio is up <span class="grad-text" style="font-weight:700">+18.2%</span> this year. Keep it up!</p>
+    </div>
+
+    <!-- portfolio stats -->
+    <div class="auto-grid reveal reveal-delay-1" style="margin-bottom:1.6rem">
+      <div class="stat-card">
+        <div class="sc-top"><span class="sc-icon icon-bg-blue"><i class="fa-solid fa-sack-dollar"></i></span><span class="badge badge-success">All time</span></div>
+        <span class="sc-label">Portfolio Value</span>
+        <b class="sc-value">$48,250.00</b>
+      </div>
+      <div class="stat-card c2">
+        <div class="sc-top"><span class="sc-icon icon-bg-cyan"><i class="fa-solid fa-coins"></i></span><span class="badge badge-info">Invested</span></div>
+        <span class="sc-label">Total Investment</span>
+        <b class="sc-value">$41,300.00</b>
+      </div>
+      <div class="stat-card c3">
+        <div class="sc-top"><span class="sc-icon icon-bg-green"><i class="fa-solid fa-arrow-trend-up"></i></span><span class="badge badge-success">+18.2%</span></div>
+        <span class="sc-label">Profit (Unrealised)</span>
+        <b class="sc-value" style="color:var(--green)">+$6,950.00</b>
+      </div>
+    </div>
+
+    <div class="dash-grid">
+      <!-- ======== pie chart ======== -->
+      <div class="dash-card reveal reveal-delay-2">
+        <div class="dash-card-head"><h3>Portfolio Allocation</h3><span class="badge badge-info">Live</span></div>
+        <div class="chart-box">
+          <canvas id="dashInvestPie" aria-label="Dashboard investment portfolio pie chart"></canvas>
+          <div class="chart-center"><div><b>$48.2k</b><span>Total value</span></div></div>
+        </div>
+        <ul class="legend" style="margin-top:1rem">
+          <li><span class="dot" style="background:#2742f5"></span> Equity Funds <b>45%</b></li>
+          <li><span class="dot" style="background:#7c3aed"></span> Stocks <b>25%</b></li>
+          <li><span class="dot" style="background:#22d3ee"></span> Debt <b>15%</b></li>
+          <li><span class="dot" style="background:#f59e0b"></span> Gold <b>10%</b></li>
+          <li><span class="dot" style="background:#f472b6"></span> Cash <b>5%</b></li>
+        </ul>
+      </div>
+
+      <!-- ======== holdings ======== -->
+      <div class="dash-card investment-holdings-card reveal reveal-delay-3">
+        <div class="dash-card-head"><h3>Top Holdings</h3><span class="badge badge-success">Viewing 5</span></div>
+        <div style="display:flex;flex-direction:column">
+          <div class="holding-row">
+            <span class="alloc-dot icon-bg-blue"><i class="fa-solid fa-arrow-trend-up"></i></span>
+            <div class="h-name"><b>Stackly Nifty 50 Index</b><span>Equity Fund · 120 units</span></div>
+            <div style="text-align:right"><b class="h-value">$21,712</b><span class="h-gain" style="color:var(--green)">+19.4%</span></div>
+          </div>
+          <div class="holding-row">
+            <span class="alloc-dot icon-bg-purple"><i class="fa-solid fa-chart-simple"></i></span>
+            <div class="h-name"><b>Reliance Industries</b><span>Stock · 45 shares</span></div>
+            <div style="text-align:right"><b class="h-value">$9,180</b><span class="h-gain" style="color:var(--green)">+12.1%</span></div>
+          </div>
+          <div class="holding-row">
+            <span class="alloc-dot icon-bg-cyan"><i class="fa-solid fa-landmark"></i></span>
+            <div class="h-name"><b>Gilt Bond Fund</b><span>Debt Fund · 200 units</span></div>
+            <div style="text-align:right"><b class="h-value">$7,240</b><span class="h-gain" style="color:var(--amber)">+6.8%</span></div>
+          </div>
+          <div class="holding-row">
+            <span class="alloc-dot icon-bg-amber"><i class="fa-solid fa-coins"></i></span>
+            <div class="h-name"><b>Digital Gold</b><span>Commodity · 12 g</span></div>
+            <div style="text-align:right"><b class="h-value">$4,826</b><span class="h-gain" style="color:var(--green)">+9.2%</span></div>
+          </div>
+          <div class="holding-row">
+            <span class="alloc-dot icon-bg-pink"><i class="fa-solid fa-wallet"></i></span>
+            <div class="h-name"><b>Liquid Cash</b><span>Money Market · Instant</span></div>
+            <div style="text-align:right"><b class="h-value">$2,413</b><span class="h-gain" style="color:var(--muted)">+4.2%</span></div>
+          </div>
+        </div>
+        <div class="market-snapshot">
+          <div class="dash-card-head"><h3>Market Snapshot</h3><span class="badge badge-info">Today</span></div>
+          <div class="market-row"><span><i class="fa-solid fa-arrow-trend-up"></i> Nifty 50</span><b class="amount-in">+1.24%</b></div>
+          <div class="market-row"><span><i class="fa-solid fa-arrow-trend-up"></i> S&amp;P 500</span><b class="amount-in">+0.68%</b></div>
+          <div class="market-row"><span><i class="fa-solid fa-chart-line"></i> Your portfolio</span><b class="amount-in">+18.2%</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dash-card investment-insights reveal reveal-delay-2" style="margin-top:1.6rem">
+      <div class="dash-card-head"><h3>Investment Insights</h3><span class="badge badge-success">Healthy portfolio</span></div>
+      <div class="auto-grid">
+        <div class="feature-card"><span class="icon-chip icon-bg-green"><i class="fa-solid fa-arrow-trend-up"></i></span><h3>Strong Growth</h3><p>Your portfolio is outperforming the market by 4.6% this year.</p></div>
+        <div class="feature-card"><span class="icon-chip icon-bg-blue"><i class="fa-solid fa-shield-halved"></i></span><h3>Balanced Risk</h3><p>Your investments are diversified across five asset classes.</p></div>
+        <div class="feature-card"><span class="icon-chip icon-bg-purple"><i class="fa-solid fa-calendar-check"></i></span><h3>Next SIP</h3><p>Your next monthly investment of $500 is scheduled for 5 Oct 2026.</p></div>
+      </div>
+    </div>
+
+    <!-- ======== portfolio fields ======== -->
+    <div class="dash-card reveal reveal-delay-2" style="margin-top:1.6rem">
+      <div class="dash-card-head"><h3>Portfolio Quick Fields</h3><span class="badge badge-info">Guided Plans</span></div>
+      <div class="auto-grid">
+        <div class="alloc-card"><div class="a-name"><span class="alloc-dot icon-bg-green"><i class="fa-solid fa-graduation-cap"></i></span><div><b>Education Goal</b><span>On track · 82% funded</span></div></div><div class="progress" style="width:70px"><i style="width:82%"></i></div></div>
+        <div class="alloc-card"><div class="a-name"><span class="alloc-dot icon-bg-blue"><i class="fa-solid fa-umbrella-beach"></i></span><div><b>Retirement Goal</b><span>2035 target · 47% funded</span></div></div><div class="progress p2" style="width:70px"><i style="width:47%"></i></div></div>
+        <div class="alloc-card"><div class="a-name"><span class="alloc-dot icon-bg-pink"><i class="fa-solid fa-house"></i></span><div><b>Home Down Payment</b><span>2028 target · 60% funded</span></div></div><div class="progress p3" style="width:70px"><i style="width:60%"></i></div></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loans | STACKLY Dashboard</title>
+  <meta name="description" content="Track your active Stackly loans, EMI schedule and progress.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="loans">
+  <div id="dashShell"></div>
+
+  <main class="dash-main">
+    <div class="dash-welcome reveal">
+      <h1>Loans</h1>
+      <p>Everything about your active loans — amounts, EMIs and progress.</p>
+    </div>
+
+    <!-- loan stats -->
+    <div class="auto-grid reveal reveal-delay-1" style="margin-bottom:1.6rem">
+      <div class="stat-card">
+        <div class="sc-top"><span class="sc-icon icon-bg-blue"><i class="fa-solid fa-sack-dollar"></i></span><span class="badge badge-info">3 active</span></div>
+        <span class="sc-label">Total Outstanding</span>
+        <b class="sc-value">$38,450.00</b>
+      </div>
+      <div class="stat-card c2">
+        <div class="sc-top"><span class="sc-icon icon-bg-amber"><i class="fa-solid fa-calendar-check"></i></span><span class="badge badge-warning">Due soon</span></div>
+        <span class="sc-label">Next EMI (25 Sep)</span>
+        <b class="sc-value">$734.20</b>
+      </div>
+      <div class="stat-card c3">
+        <div class="sc-top"><span class="sc-icon icon-bg-purple"><i class="fa-solid fa-hand-holding-dollar"></i></span><span class="badge badge-success">On track</span></div>
+        <span class="sc-label">Repayment Health</span>
+        <b class="sc-value">94%</b>
+      </div>
+    </div>
+
+    <div class="dash-grid">
+      <!-- ======== active loans ======== -->
+      <div style="display:grid;gap:1.4rem">
+        <!-- home loan -->
+        <div class="dash-card reveal reveal-delay-2">
+          <div class="dash-card-head">
+            <h3><i class="fa-solid fa-house grad-text" style="margin-right:.4rem"></i> Home Loan</h3>
+            <span class="badge badge-info">Sanctioned</span>
+          </div>
+          <div class="grid" style="grid-template-columns:1fr 1fr 1fr;gap:1rem">
+            <div><span class="sc-label">Loan Amount</span><br><b>$25,000.00</b></div>
+            <div><span class="sc-label">Monthly EMI</span><br><b>$315.60</b></div>
+            <div><span class="sc-label">Interest Rate</span><br><b>8.4% p.a.</b></div>
+          </div>
+          <div style="margin-top:1.1rem">
+            <div class="row" style="display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:.4rem"><span style="color:var(--muted)">Remaining Balance</span><b>$16,820.00 (67%)</b></div>
+            <div class="progress loan-progress" data-value="33"><i></i></div>
+          </div>
+          <div class="grid" style="grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.2rem">
+            <div class="feature-card" style="padding:1rem;text-align:center"><span class="sc-label">Next Payment</span><br><b style="display:block">25 Sep 2026</b></div>
+            <div class="feature-card" style="padding:1rem;text-align:center"><span class="sc-label">Tenure Remaining</span><br><b style="display:block">4 yrs 3 m</b></div>
+          </div>
+        </div>
+
+        <!-- bike loan -->
+        <div class="dash-card reveal reveal-delay-2">
+          <div class="dash-card-head">
+            <h3><i class="fa-solid fa-motorcycle grad-text" style="margin-right:.4rem"></i> Vehicle Loan</h3>
+            <span class="badge badge-success">Active</span>
+          </div>
+          <div class="grid" style="grid-template-columns:1fr 1fr 1fr;gap:1rem">
+            <div><span class="sc-label">Loan Amount</span><br><b>$6,500.00</b></div>
+            <div><span class="sc-label">Monthly EMI</span><br><b>$198.20</b></div>
+            <div><span class="sc-label">Interest Rate</span><br><b>7.9% p.a.</b></div>
+          </div>
+          <div style="margin-top:1.1rem">
+            <div class="row" style="display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:.4rem"><span style="color:var(--muted)">Remaining Balance</span><b>$3,240.00 (50%)</b></div>
+            <div class="progress p2 loan-progress" data-value="50"><i></i></div>
+          </div>
+          <div class="grid" style="grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.2rem">
+            <div class="feature-card" style="padding:1rem;text-align:center"><span class="sc-label">Next Payment</span><br><b style="display:block">18 Sep 2026</b></div>
+            <div class="feature-card" style="padding:1rem;text-align:center"><span class="sc-label">Tenure Remaining</span><br><b style="display:block">2 yrs 0 m</b></div>
+          </div>
+        </div>
+
+        <!-- personal loan -->
+        <div class="dash-card reveal reveal-delay-3">
+          <div class="dash-card-head">
+            <h3><i class="fa-solid fa-user grad-text" style="margin-right:.4rem"></i> Personal Loan</h3>
+            <span class="badge badge-success">Active</span>
+          </div>
+          <div class="grid" style="grid-template-columns:1fr 1fr 1fr;gap:1rem">
+            <div><span class="sc-label">Loan Amount</span><br><b>$10,000.00</b></div>
+            <div><span class="sc-label">Monthly EMI</span><br><b>$220.40</b></div>
+            <div><span class="sc-label">Interest Rate</span><br><b>10.5% p.a.</b></div>
+          </div>
+          <div style="margin-top:1.1rem">
+            <div class="row" style="display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:.4rem"><span style="color:var(--muted)">Remaining Balance</span><b>$18,390.00 (92%)</b></div>
+            <div class="progress p3 loan-progress" data-value="8"><i></i></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======== right column ======== -->
+      <div style="display:grid;gap:1.4rem">
+        <div class="dash-card reveal reveal-delay-2">
+          <div class="dash-card-head"><h3>Loan Statistics</h3></div>
+          <ul class="legend">
+            <li><span class="dot" style="background:#2742f5"></span> Home Loan <b style="color:var(--green)">68% remaining</b></li>
+            <li><span class="dot" style="background:#f59e0b"></span> Vehicle Loan <b style="color:var(--amber)">50% remaining</b></li>
+            <li><span class="dot" style="background:#7c3aed"></span> Personal Loan <b style="color:var(--red)">92% remaining</b></li>
+            <li><span class="dot" style="background:#22d3ee"></span> Overall Repayment <b>43%</b></li>
+          </ul>
+          <p style="font-size:.82rem;color:var(--text);margin-top:1rem">
+            <i class="fa-solid fa-circle-info" style="color:var(--blue)"></i> Prepay anytime with zero penalties and watch your interest shrink.
+          </p>
+        </div>
+
+        <div class="dash-card c2 reveal reveal-delay-3" style="background:var(--grad-hero);border:none;color:#fff">
+          <h3 style="color:#fff">Need more funds?</h3>
+          <p style="color:rgba(255,255,255,.75);font-size:.9rem;margin:.4rem 0 1rem">
+            Check your pre-approved loan limit — it takes 60 seconds.
+          </p>
+        </div>
+
+        <div style="position:relative" class="reveal reveal-delay-3">
+          <div class="story-img small" style="box-shadow:var(--shadow-sm)">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80"
+                 alt="Young family holding the keys of their new home funded by a Stackly home loan">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

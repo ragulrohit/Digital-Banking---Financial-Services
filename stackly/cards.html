@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards | STACKLY Dashboard</title>
+  <meta name="description" content="Manage your Stackly debit, credit and virtual cards — freeze, unfreeze and view details.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="cards">
+  <div id="dashShell"></div>
+
+  <main class="dash-main">
+    <div class="dash-welcome reveal">
+      <h1>Cards</h1>
+      <p>Freeze, unfreeze and inspect every card in your wallet.</p>
+    </div>
+
+    <!-- ======== debit card ======== -->
+    <div class="dash-grid">
+      <div class="card-shell reveal reveal-delay-1">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+          <h2 class="card-title">Debit Card</h2>
+          <span class="card-status on"><i class="fa-solid fa-check"></i> Active</span>
+        </div>
+        <div class="bank-card primary">
+          <span class="bc-stripe"></span>
+          <div class="bc-top">
+            <span class="bank-chip"></span>
+            <span class="bc-brand"><img class="card-brand-logo" src="/stackly/assets/icons/stackly-logo.svg?v=2" alt="Stackly logo"> STACKLY</span>
+          </div>
+          <div class="bc-num"><span class="masked">•••• •••• •••• 4821</span><span class="full" hidden>4532 1098 7654 4821</span></div>
+          <div class="bc-meta">
+            <span><span>CARD HOLDER</span>JEEVA R.</span>
+            <span><span>VALID THRU</span>09/30</span>
+            <span><span>CVV</span>•••</span>
+          </div>
+        </div>
+        <div class="card-controls">
+          <button class="btn btn-sm btn-ghost" data-action="freeze"><i class="fa-solid fa-snowflake"></i> Freeze Card</button>
+          <button class="btn btn-sm btn-primary" data-action="unfreeze"><i class="fa-solid fa-unlock"></i> Unfreeze</button>
+          <button class="btn btn-sm btn-outline" data-action="details" style="border-color:var(--border);color:var(--blue)"><i class="fa-solid fa-eye"></i> View Details</button>
+        </div>
+      </div>
+
+      <!-- ======== credit card ======== -->
+      <div class="card-shell reveal reveal-delay-2">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+          <h2 class="card-title">Credit Card</h2>
+          <span class="card-status on"><i class="fa-solid fa-check"></i> Active</span>
+        </div>
+        <div class="bank-card pink">
+          <span class="bc-stripe"></span>
+          <div class="bc-top">
+            <span class="bank-chip"></span>
+            <span class="bc-brand"><img class="card-brand-logo" src="/stackly/assets/icons/stackly-logo.svg?v=2" alt="Stackly logo"> STACKLY</span>
+          </div>
+          <div class="bc-num"><span class="masked">•••• •••• •••• 1904</span><span class="full" hidden>5148 0012 6778 1904</span></div>
+          <div class="bc-meta">
+            <span><span>CARD HOLDER</span>JEEVA R.</span>
+            <span><span>VALID THRU</span>07/29</span>
+            <span><span>LIMIT</span>$5,000</span>
+          </div>
+        </div>
+        <div class="card-controls">
+          <button class="btn btn-sm btn-ghost" data-action="freeze"><i class="fa-solid fa-snowflake"></i> Freeze Card</button>
+          <button class="btn btn-sm btn-primary" data-action="unfreeze"><i class="fa-solid fa-unlock"></i> Unfreeze</button>
+          <button class="btn btn-sm btn-outline" data-action="details" style="border-color:var(--border);color:var(--blue)"><i class="fa-solid fa-eye"></i> View Details</button>
+        </div>
+      </div>
+
+      <!-- ======== virtual card ======== -->
+      <div class="card-shell reveal reveal-delay-3">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+          <h2 class="card-title">Virtual Card</h2>
+          <span class="card-status on"><i class="fa-solid fa-check"></i> Active</span>
+        </div>
+        <div class="bank-card cyan">
+          <span class="bc-stripe"></span>
+          <div class="bc-top">
+            <span class="bank-chip"></span>
+            <span class="bc-brand"><img class="card-brand-logo" src="/stackly/assets/icons/stackly-logo.svg?v=2" alt="Stackly logo"> STACKLY</span>
+          </div>
+          <div class="bc-num"><span class="masked">•••• •••• •••• 7788</span><span class="full" hidden>4341 9908 1234 7788</span></div>
+          <div class="bc-meta">
+            <span><span>USED ONLINE</span>Securely</span>
+            <span><span>VALID THRU</span>12/27</span>
+            <span><span>CVV</span>• • •</span>
+          </div>
+        </div>
+        <div class="card-controls">
+          <button class="btn btn-sm btn-ghost" data-action="freeze"><i class="fa-solid fa-snowflake"></i> Freeze Card</button>
+          <button class="btn btn-sm btn-primary" data-action="unfreeze"><i class="fa-solid fa-unlock"></i> Unfreeze</button>
+          <button class="btn btn-sm btn-outline" data-action="details" style="border-color:var(--border);color:var(--blue)"><i class="fa-solid fa-eye"></i> View Details</button>
+        </div>
+      </div>
+      <div class="card-shell reveal reveal-delay-3">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+          <h2 class="card-title">Travel Card</h2>
+          <span class="card-status on"><i class="fa-solid fa-check"></i> Active</span>
+        </div>
+        <div class="bank-card primary">
+          <span class="bc-stripe"></span>
+          <div class="bc-top"><span class="bank-chip"></span><span class="bc-brand"><img class="card-brand-logo" src="/stackly/assets/icons/stackly-logo.svg?v=2" alt="Stackly logo"> STACKLY</span></div>
+          <div class="bc-num"><span class="masked">•••• •••• •••• 6620</span><span class="full" hidden>4532 1098 7654 6620</span></div>
+          <div class="bc-meta"><span><span>CARD HOLDER</span>JEEVA R.</span><span><span>VALID THRU</span>11/30</span><span><span>CVV</span>•••</span></div>
+        </div>
+        <div class="card-controls">
+          <button class="btn btn-sm btn-ghost" data-action="freeze"><i class="fa-solid fa-snowflake"></i> Freeze Card</button>
+          <button class="btn btn-sm btn-primary" data-action="unfreeze"><i class="fa-solid fa-unlock"></i> Unfreeze</button>
+          <button class="btn btn-sm btn-outline" data-action="details" style="border-color:var(--border);color:var(--blue)"><i class="fa-solid fa-eye"></i> View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======== info row ======== -->
+    <div class="dash-card reveal reveal-delay-2" style="margin-top:1.6rem">
+      <div class="dash-card-head"><h3>Card Settings &amp; Perks</h3></div>
+      <div class="auto-grid">
+        <div class="feature-card" style="padding:1.4rem"><span class="icon-chip icon-bg-blue" style="width:44px;height:44px"><i class="fa-solid fa-bolt"></i></span><h3>Instant Issuance</h3><p>Cards generated instantly after account opening.</p></div>
+        <div class="feature-card" style="padding:1.4rem"><span class="icon-chip icon-bg-purple" style="width:44px;height:44px"><i class="fa-solid fa-percent"></i></span><h3>5% Cashback</h3><p>On dining, travel and online shopping — capped monthly.</p></div>
+        <div class="feature-card" style="padding:1.4rem"><span class="icon-chip icon-bg-cyan" style="width:44px;height:44px"><i class="fa-solid fa-shield-halved"></i></span><h3>Zero Liability</h3><p>Full fraud protection on every card you own.</p></div>
+        <div class="feature-card" style="padding:1.4rem"><span class="icon-chip icon-bg-amber" style="width:44px;height:44px"><i class="fa-solid fa-globe"></i></span><h3>Tap &amp; Go</h3><p>Contactless payments accepted at 40M+ terminals worldwide.</p></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

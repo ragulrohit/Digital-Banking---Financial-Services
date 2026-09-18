@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investments | STACKLY</title>
+  <meta name="description" content="Stackly investments — mutual funds, stocks, retirement planning, wealth management and portfolio tools with an interactive pie chart.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="investments">
+  <div id="navRoot"></div>
+
+  <header class="page-hero">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2" style="right:-40px;bottom:-70px"></span>
+    <div class="container">
+      <h1>Invest in your <span class="grad-text-3">future</span></h1>
+      <p>Smart, low-cost investing for every goal — powered by insights, not guesswork.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Investments</span></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- intro -->
+    <section class="section">
+      <div class="container split">
+        <div class="reveal-left">
+          <span class="section-tag"><i class="fa-solid fa-chart-line"></i> Investment Planning</span>
+          <h2 class="section-title">Invest smart, <span class="grad-text">sleep peacefully</span></h2>
+          <p class="section-sub">Whether you are saving for a home, your child's education or retirement — Stackly builds a plan that fits your risk and timelines.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-circle-check"></i> Goal-based investment plans</li>
+            <li><i class="fa-solid fa-circle-check"></i> Direct mutual funds with zero commission</li>
+            <li><i class="fa-solid fa-circle-check"></i> Robo-advisory &amp; expert-managed portfolios</li>
+            <li><i class="fa-solid fa-circle-check"></i> Tax-efficient retirement strategies</li>
+          </ul>
+          <a href="signup.html" class="btn btn-cyan"><i class="fa-solid fa-calculator"></i> Start Investing</a>
+        </div>
+        <div class="story-shell reveal-right">
+          <div class="story-img">
+            <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=1000&q=80"
+                 alt="Investor analysing rising stock market charts on a laptop screen">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- interactive portfolio pie chart -->
+    <section class="section tight" style="background:linear-gradient(180deg, transparent, #fff)">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-chart-pie"></i> Interactive Portfolio</span>
+          <h2 class="section-title">Your money at a <span class="grad-text">glance</span></h2>
+          <p class="section-sub">A live allocation pie chart built with JavaScript — hover the legend to understand your portfolio.</p>
+        </div>
+
+        <div class="portfolio-hero reveal reveal-scale">
+          <div>
+            <style>
+              .portfolio-hero .chart-center { color: #fff; }
+              .portfolio-hero .chart-center b { color: #fff; }
+              .portfolio-hero .chart-center > div > span:not(.badge) { color: rgba(255, 255, 255, 0.7) !important; }
+            </style>
+            <div class="chart-box">
+              <canvas id="publicPie" aria-label="Investment portfolio allocation chart"></canvas>
+              <div class="chart-center">
+                <div><b>$48,250</b><span>Portfolio Value</span><br>
+                  <span class="badge" style="background:rgba(34,197,94,.2);color:#4ade80;margin-top:.3rem"><i class="fa-solid fa-arrow-trend-up"></i> +18.2% YTD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 style="color:#fff;margin-bottom:1.2rem">Allocation Breakdown</h3>
+            <ul class="legend" style="color:rgba(255,255,255,.85)">
+              <li><span class="dot" style="background:#2742f5"></span> Index Funds <b style="color:#fff">45%</b></li>
+              <li><span class="dot" style="background:#7c3aed"></span> Stocks <b style="color:#fff">25%</b></li>
+              <li><span class="dot" style="background:#22d3ee"></span> Debt &amp; Bonds <b style="color:#fff">15%</b></li>
+              <li><span class="dot" style="background:#f59e0b"></span> Gold <b style="color:#fff">10%</b></li>
+              <li><span class="dot" style="background:#f472b6"></span> Cash <b style="color:#fff">5%</b></li>
+            </ul>
+            <div style="display:flex;gap:1.4rem;margin-top:1.6rem">
+              <div><span style="font-size:.76rem;color:rgba(255,255,255,.6)">Total Invested</span><br><b style="color:#fff">$41,300</b></div>
+              <div><span style="font-size:.76rem;color:rgba(255,255,255,.6)">Total Returns</span><br><b style="color:#4ade80">+$6,950</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- categories -->
+    <section class="section tight">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag"><i class="fa-solid fa-table-cells-large"></i> Investment Products</span>
+          <h2 class="section-title">Choose your <span class="grad-text">investment style</span></h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="feature-card reveal reveal-delay-1">
+            <span class="icon-chip icon-bg-blue"><i class="fa-solid fa-circle-notch"></i></span>
+            <h3>Mutual Funds</h3>
+            <p>2,000+ funds with direct plans, zero commission and SIPs from ₹500.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <span class="icon-chip icon-bg-purple"><i class="fa-solid fa-chart-simple"></i></span>
+            <h3>Stocks</h3>
+            <p>Trade NSE &amp; BSE stocks with research tools and paperless brokerage.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-3">
+            <span class="icon-chip icon-bg-cyan"><i class="fa-solid fa-umbrella-beach"></i></span>
+            <h3>Retirement Planning</h3>
+            <p>NPS, PPF and pension plans that compound quietly through the years.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <span class="icon-chip icon-bg-green"><i class="fa-solid fa-gem"></i></span>
+            <h3>Wealth Management</h3>
+            <p>Dedicated advisors for portfolios above $50,000 with priority access.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-3">
+            <span class="icon-chip icon-bg-pink"><i class="fa-solid fa-layer-group"></i></span>
+            <h3>Portfolio Management</h3>
+            <p>Systematic rebalancing and tax-loss harvesting on autopilot.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-4">
+            <span class="icon-chip icon-bg-amber"><i class="fa-solid fa-sack-dollar"></i></span>
+            <h3>Fixed Income</h3>
+            <p>Fixed deposits, bonds and debentures with flexible tenures.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- projection form -->
+    <section class="section tight" style="background:linear-gradient(180deg, transparent, #fff)">
+      <div class="container split">
+        <div class="reveal-left">
+          <span class="section-tag"><i class="fa-solid fa-calculator"></i> Projection Tool</span>
+          <h2 class="section-title">What could your money <span class="grad-text">become?</span></h2>
+          <p class="section-sub">Enter an investment amount, time horizon and risk appetite to see a realistic growth projection.</p>
+          <form id="investForm" class="card" style="padding:1.8rem;gap:1.1rem;display:grid;margin-top:1.4rem">
+            <div class="form-group">
+              <label class="form-label" for="investAmount">Investment Amount (₹)</label>
+              <input class="form-control" type="number" id="investAmount" min="500" placeholder="e.g. 100000">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="investYears">Time Horizon (Years)</label>
+              <input class="form-control" type="number" id="investYears" min="1" max="40" placeholder="e.g. 10">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="investRisk">Risk Appetite</label>
+              <select class="form-control" id="investRisk">
+                <option value="low">Low — Conservative (≈8% p.a.)</option>
+                <option value="medium" selected>Medium — Balanced (≈12% p.a.)</option>
+                <option value="high">High — Aggressive (≈16% p.a.)</option>
+              </select>
+            </div>
+            <button class="btn btn-cyan btn-block" type="submit"><i class="fa-solid fa-wand-magic-sparkles"></i> Calculate Projection</button>
+            <div id="projectedValue" class="contact-success" style="justify-content:center;text-align:center">
+              <i class="fa-solid fa-chart-line"></i> Projected Portfolio Value
+            </div>
+          </form>
+        </div>
+        <div class="story-shell reveal-right">
+          <div class="story-img small">
+            <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=1000&q=80"
+                 alt="Happy investor checking a growing investment portfolio on a smartphone">
+          </div>
+          <div class="experience-badge" style="background:var(--grad-cyan)"><b>22%</b><span>Top portfolio return</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- stats -->
+    <section class="section tight">
+      <div class="container">
+        <div class="stats-band reveal reveal-scale">
+          <div class="stat-item"><i class="fa-solid fa-users"></i><b class="counter" data-target="1" data-suffix="M+">0</b><span>Active investors</span></div>
+          <div class="stat-item"><i class="fa-solid fa-sack-dollar"></i><b class="counter" data-target="4.6" data-suffix="B+" data-decimals="1">0</b><span>Assets managed</span></div>
+          <div class="stat-item"><i class="fa-solid fa-chart-line"></i><b class="counter" data-target="22" data-suffix="%">0</b><span>Best fund return</span></div>
+          <div class="stat-item"><i class="fa-solid fa-star"></i><b class="counter" data-target="4.9" data-decimals="1">0</b><span>App rating</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section tight">
+      <div class="container">
+        <div class="stats-band reveal reveal-scale" style="grid-template-columns:1.2fr auto;align-items:center;text-align:left;padding:3rem 3.2rem">
+          <div>
+            <h2 style="color:#fff;font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:.4rem">Start with as little as ₹500</h2>
+            <p style="color:rgba(255,255,255,.75)">Your first step toward financial freedom is a single SIP away.</p>
+          </div>
+          <a href="signup.html" class="btn btn-light btn-lg" style="white-space:nowrap"><i class="fa-solid fa-rocket"></i> Start Investing</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footerRoot"></div>
+  <script src="js/main.js"></script>
+  <script>
+    /* render the public investment portfolio pie chart */
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof registerPie === "function") {
+        registerPie(
+          "publicPie",
+          [45, 25, 15, 10, 5],
+          ["#2742f5", "#7c3aed", "#22d3ee", "#f59e0b", "#f472b6"],
+          { hole: true, holeColor: "#18234d" }
+        );
+      }
+    });
+  </script>
+</body>
+</html>

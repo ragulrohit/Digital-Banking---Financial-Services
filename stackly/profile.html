@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | STACKLY Dashboard</title>
+  <meta name="description" content="View and edit your Stackly profile information.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profile">
+  <div id="dashShell"></div>
+
+  <main class="dash-main">
+    <div class="dash-welcome reveal">
+      <h1>My Profile</h1>
+      <p>Keep your personal details safe, accurate and up to date.</p>
+    </div>
+
+    <div class="dash-grid" style="grid-template-columns:1.3fr 1fr">
+      <!-- ======== profile form ======== -->
+      <div class="dash-card reveal reveal-delay-1">
+        <div class="dash-card-head"><h3>Personal Information</h3><span class="badge badge-success"><i class="fa-solid fa-circle"></i> Verified</span></div>
+
+        <div style="display:flex;gap:1.2rem;align-items:center;margin-bottom:1.6rem">
+          <span class="avatar user-avatar" style="width:76px;height:76px;font-size:1.5rem"></span>
+          <div>
+            <h3 class="user-name" style="font-size:1.2rem">User</h3>
+            <p class="user-email" style="color:var(--muted);font-size:.9rem"></p>
+          </div>
+        </div>
+
+        <form id="profileForm" novalidate style="display:grid;gap:1.2rem">
+          <div class="form-group">
+            <label class="form-label" for="profileName">Full Name</label>
+            <div class="input-wrap">
+              <input class="form-control" id="profileName" type="text" placeholder="Your name">
+              <i class="fa-solid fa-user field-icon"></i>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="profileEmail">Email Address <span style="color:var(--muted)">(login ID — cannot change)</span></label>
+            <div class="input-wrap">
+              <input class="form-control" id="profileEmail" type="email" readonly style="background:#eef1fb;cursor:not-allowed">
+              <i class="fa-regular fa-envelope field-icon"></i>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="profilePhone">Phone Number</label>
+            <div class="input-wrap">
+              <input class="form-control" id="profilePhone" type="tel" placeholder="+91 98765 43210">
+              <i class="fa-solid fa-phone field-icon"></i>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-lg" type="submit"><i class="fa-solid fa-floppy-disk"></i> Save Changes</button>
+        </form>
+      </div>
+
+      <!-- ======== account status ======== -->
+      <div style="display:grid;gap:1.4rem">
+        <div class="dash-card reveal reveal-delay-2">
+          <div class="dash-card-head"><h3>Account Status</h3></div>
+          <div class="auto-grid profile-status-grid">
+            <div class="stat-card"><span class="sc-label">Account Status</span><b class="sc-value" style="font-size:1.1rem;color:var(--green)">Active</b></div>
+            <div class="stat-card c2"><span class="sc-label">KYC Level</span><b class="sc-value" style="font-size:1.1rem">Full</b></div>
+            <div class="stat-card c3"><span class="sc-label">Member Since</span><b class="sc-value" id="memberSince" style="font-size:1rem">—</b></div>
+            <div class="stat-card"><span class="sc-label">2FA</span><b class="sc-value" style="font-size:1.1rem;color:var(--green)">Enabled</b></div>
+          </div>
+        </div>
+
+        <div class="dash-card reveal reveal-delay-3">
+          <div class="dash-card-head"><h3>Security</h3><span class="badge badge-info">Protected</span></div>
+          <ul class="check-list" style="margin-top:.6rem">
+            <li><i class="fa-solid fa-circle-check"></i> Two-factor authentication enabled</li>
+            <li><i class="fa-solid fa-circle-check"></i> Last login: Today, 09:12 AM · Bengaluru, IN</li>
+            <li><i class="fa-solid fa-circle-check"></i> 2 active devices signed in</li>
+          </ul>
+          <a href="login.html" class="btn btn-ghost btn-sm" style="margin-top:.6rem"><i class="fa-solid fa-lock"></i> Change Password</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
