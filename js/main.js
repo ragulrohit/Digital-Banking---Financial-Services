@@ -399,7 +399,7 @@
     const closeDropdown = (wrap) => {
       if (!wrap) return;
       wrap.classList.remove('open');
-      const menu = $('.custom-select-menu', wrap);
+      const menu = wrap._customSelectMenu || $('.custom-select-menu', wrap);
       const button = $('.custom-select-button', wrap);
       if (menu) menu.classList.remove('is-open');
       if (button) button.setAttribute('aria-expanded', 'false');
@@ -414,7 +414,8 @@
     const positionMenu = (wrap) => {
       if (!wrap.classList.contains('open')) return;
       const button = $('.custom-select-button', wrap);
-      const menu = $('.custom-select-menu', wrap);
+      const menu = wrap._customSelectMenu || $('.custom-select-menu', wrap);
+      if (!button || !menu) return;
       const rect = button.getBoundingClientRect();
       const viewportPad = 10;
       const menuHeight = Math.min(menu.scrollHeight || 260, window.innerHeight - viewportPad * 2);
@@ -445,7 +446,11 @@
       const menu = document.createElement('div');
       menu.className = 'custom-select-menu';
       menu.setAttribute('role', 'listbox');
-      wrap.appendChild(menu);
+      /* Keep the menu out of animated/overflowing form containers.  A fixed
+         element inside a transformed auth card can otherwise be positioned
+         against that card instead of the viewport. */
+      wrap._customSelectMenu = menu;
+      document.body.appendChild(menu);
 
       const label = $('.custom-select-label', button);
       const sync = () => {
@@ -489,7 +494,8 @@
 
     document.addEventListener('pointerdown', (event) => {
       const open = $('.custom-select.open');
-      if (open && !open.contains(event.target)) closeDropdown(open);
+      const menu = open && open._customSelectMenu;
+      if (open && !open.contains(event.target) && !(menu && menu.contains(event.target))) closeDropdown(open);
     }, true);
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') closeAll();

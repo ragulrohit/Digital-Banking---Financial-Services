@@ -299,6 +299,13 @@ body[data-page="signup"] .navbar { background: rgba(11, 16, 48, 0.4); backdrop-f
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero-stat span { font-size: 0.78rem; color: rgba(255, 255, 255, 0.7); }
+.investment-stats .hero-stat b {
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  color: var(--blue);
+}
+.investment-stats .hero-stat span { color: var(--dark); font-weight: 600; }
 .hero-visual { position: relative; animation: fadeUp 1s var(--ease) 0.25s both; }
 .hero-img {
   border-radius: var(--radius-xl); overflow: hidden;
