@@ -16,7 +16,7 @@
     const pl = document.createElement("div");
     pl.id = "pageLoader";
     pl.className = "loader";
-    pl.innerHTML = '<div><div class="loader-ring"></div><b><img class="brand-logo loader-logo" src="../images/Stackly_logo.png" alt="Stackly logo"></b></div>';
+    pl.innerHTML = '<div><div class="loader-ring"></div><b><img class="brand-logo loader-logo" src="stackly/assets/icons/images/Stackly_logo.png" alt="Stackly logo"></b></div>';
     document.body.prepend(pl);
     const hide = () => { pl.classList.add("hide"); setTimeout(() => pl.remove(), 450); };
     window.addEventListener("load", hide);
@@ -49,7 +49,7 @@
     root.innerHTML = `
       <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-          <a href="index.html" class="nav-logo" aria-label="Stackly home"><img class="brand-logo" src="../images/Stackly_logo.png" alt="Stackly logo"></a>
+          <a href="index.html" class="nav-logo" aria-label="Stackly home"><img class="brand-logo" src="stackly/assets/icons/images/Stackly_logo.png" alt="Stackly logo"></a>
           <button class="nav-toggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
           <div class="nav-overlay"></div>
           <div class="nav-menu">
@@ -97,7 +97,7 @@
         <div class="container">
           <div class="footer-grid">
             <div class="footer-brand">
-              <a href="index.html" class="nav-logo" style="font-size:1.4rem" aria-label="Stackly home"><img class="brand-logo" src="../images/Stackly_logo.png" alt="Stackly logo"></a>
+              <a href="index.html" class="nav-logo" style="font-size:1.4rem" aria-label="Stackly home"><img class="brand-logo" src="stackly/assets/icons/images/Stackly_logo.png" alt="Stackly logo"></a>
               <p>Modern digital banking & financial services for individuals and businesses. Secure, fast and transparent.</p>
               <div class="socials">
                 <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
